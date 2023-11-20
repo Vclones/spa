@@ -3,6 +3,7 @@ import { fetchBaiVietById } from "../../api/baiviet";
 import { useParams } from "react-router-dom";
 import Related_Blogs from "./Related_Blogs";
 import moment from "moment";
+import FormComment  from "../FormComment";
 
 const Blog_detail = () => {
   const { id } = useParams();
@@ -38,12 +39,12 @@ const Blog_detail = () => {
                   <h1>Tin tức chi tiết</h1>
                   <ul>
                     <li>
-                      <a href="#" className="text-decoration-none">
+                      <a href="#!" className="text-decoration-none">
                         <i className="fas fa-home"></i> Trang chủ
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-decoration-none">
+                      <a href="#!" className="text-decoration-none">
                         Tin tức chi tiết
                       </a>
                     </li>
@@ -56,6 +57,7 @@ const Blog_detail = () => {
       </section>
       <section className="tf__blog_details mt_120 xs_mt_70 pb_5">
         <div className="container">
+        
           <div className="row">
             <div className="col-lg-12">
               <div className="tf__blog_details_text">
@@ -116,7 +118,7 @@ const Blog_detail = () => {
                       <span>(12)</span>
                     </p>
                     <p className="description">Bài viết này rất là hữu ích</p>
-                    <a href="#" className="reply text-decoration-none">
+                    <a href="#!" className="reply text-decoration-none">
                       Phản hồi
                     </a>
                   </div>
@@ -142,7 +144,7 @@ const Blog_detail = () => {
                       <span>(20)</span>
                     </p>
                     <p className="description">Thông tin này rất là bổ ích</p>
-                    <a href="#" className="reply text-decoration-none">
+                    <a href="#!" className="reply text-decoration-none">
                       Phản hồi
                     </a>
                   </div>
@@ -151,45 +153,11 @@ const Blog_detail = () => {
 
               <div className="tf__service_review_input mt_50 xs_mb_25">
                 <h3>Bình luận</h3>
-                <form>
-                  <div className="row">
-                    <div className="col-xl-6">
-                      <input type="text" placeholder="Họ và tên" />
-                    </div>
-                    <div className="col-xl-6">
-                      <input type="text" placeholder="Email" />
-                    </div>
-                    <div className="col-12">
-                      <textarea
-                        rows="7"
-                        placeholder="Nội dung bình luận"
-                      ></textarea>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                        <label
-                          className="form-check-label"
-                          htmlFor="flexCheckDefault"
-                        >
-                          Lưu tên và email lại cho lần sau bình luận
-                        </label>
-                      </div>
-                      <button type="submit" className="common_btn">
-                        Bình luận
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <FormComment/>
               </div>
             </div>
           </div>
-          <Related_Blogs />
+          <Related_Blogs/>
         </div>
       </section>
     </div>
